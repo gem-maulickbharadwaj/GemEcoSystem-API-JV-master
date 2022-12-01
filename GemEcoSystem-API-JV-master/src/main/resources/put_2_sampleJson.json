@@ -1,0 +1,31 @@
+{
+
+  "s_run_id":"testsuiteidaaaaaaaaaaaaaaaaaaaaaaa",
+
+  "s_start_time": "#date-ddMMyyyyhhmmss-UTC+05:30#",
+
+  "s_end_time": "#date-ddMMyyyyhhmmss-UTC+05:30-Second-4#",
+
+  "status": "FAIL",
+
+  "project_name": "test-project",
+
+  "run_type": "ON DEMAND",
+
+  "s_report_type": null,
+
+  "user": "maulick_test",
+
+  "env": "beta",
+
+  "machine": "csgeek",
+
+  "initiated_by": "maulick_test",
+
+  "run_mode": "LINUX_CLI",
+
+  "miscData": [],
+
+  "s_id": "test_id"
+
+}
