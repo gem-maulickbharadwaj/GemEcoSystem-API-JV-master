@@ -140,6 +140,7 @@ Feature: GemEcoSystem-APIs-JV
       | endpoint | Method | Expected_status | SampleName         |
       | pospo    | Post   | 400             | psuite2_sampleJson |
 
+
   Scenario Outline: Update the suite using Put API
     Given Update Suite using endpoint and method and SampleName "<endpoint>" and "<Method>" and "<SampleName>"
     Then Verify Status code <Expected_status>
