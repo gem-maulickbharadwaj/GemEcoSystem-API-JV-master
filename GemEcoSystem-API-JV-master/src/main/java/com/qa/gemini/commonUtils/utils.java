@@ -103,8 +103,12 @@ public class utils {
                 request.setStep(step);
             }
             if (!sampleName.equals("")) {
-                String payload = ProjectSampleJson.getSampleDataString(sampleName);
+                String payloads = ProjectSampleJson.getSampleDataString(sampleName);
+                JsonParser parser = new JsonParser();
+                JsonObject pay = (JsonObject) parser.parse(payloads);
+                String payload = String.valueOf(ApiHealthCheckUtils.result(pay));
                 request.setRequestPayload(payload);
+                GemTestReporter.addTestStep("Payload ", String.valueOf(payload), STATUS.INFO);
             }
             response = ApiInvocation.handleRequest(request);
             GemTestReporter.addTestStep(method.toUpperCase() + " Request Verification ", method.toUpperCase() + " Request Executed Successfully", STATUS.PASS);
@@ -124,7 +128,7 @@ public class utils {
         return response;
     }
 
-    public static Response lastFiveM(String UrlNameFromConfig, String method, String step, Map<String, String> headers) throws Exception{
+    public static Response lastFiveM(String UrlNameFromConfig, String method, String step, Map<String, String> headers) throws Exception {
         Response response = new Response();
         try {
             Request request = new Request();
@@ -211,8 +215,8 @@ public class utils {
             Map<String, String> headers = new HashMap<>();
             headers.put("username", username);
             headers.put("bridgeToken", bt);
-            GemTestReporter.addTestStep("username","username : "+username,STATUS.INFO);
-            GemTestReporter.addTestStep("bridgeToken","bridgeToken: "+bt,STATUS.INFO);
+            GemTestReporter.addTestStep("username", "username : " + username, STATUS.INFO);
+            GemTestReporter.addTestStep("bridgeToken", "bridgeToken: " + bt, STATUS.INFO);
             response = new Response();
             Request request = new Request();
             request.setURL(url);
@@ -258,8 +262,8 @@ public class utils {
             Map<String, String> headers = new HashMap<>();
             headers.put("username", username);
             headers.put("bridgeToken", bt);
-            GemTestReporter.addTestStep("username","username : "+username,STATUS.INFO);
-            GemTestReporter.addTestStep("bridgeToken","bridgeToken: "+bt,STATUS.INFO);
+            GemTestReporter.addTestStep("username", "username : " + username, STATUS.INFO);
+            GemTestReporter.addTestStep("bridgeToken", "bridgeToken: " + bt, STATUS.INFO);
             response = new Response();
             Request request = new Request();
             request.setURL(url);
@@ -311,8 +315,8 @@ public class utils {
             Map<String, String> headers = new HashMap<>();
             headers.put("username", username);
             headers.put("bridgeToken", bt);
-            GemTestReporter.addTestStep("username","username : "+username,STATUS.INFO);
-            GemTestReporter.addTestStep("bridgeToken","bridgeToken: "+bt,STATUS.INFO);
+            GemTestReporter.addTestStep("username", "username : " + username, STATUS.INFO);
+            GemTestReporter.addTestStep("bridgeToken", "bridgeToken: " + bt, STATUS.INFO);
             Request request = new Request();
             request.setURL(url);
             request.setMethod(method);
@@ -346,6 +350,29 @@ public class utils {
             String Token;
             String urlss = ProjectConfigData.getProperty("Login");
             String payload = ProjectSampleJson.getSampleDataString("Login_sampleJson");
+            Request request = new Request();
+            request.setURL(urlss);
+            request.setMethod("Post");
+            request.setRequestPayload(payload);
+            Response response = ApiInvocation.handleRequest(request);
+            String Body = response.getResponseBody();
+            JsonParser parser = new JsonParser();
+            JsonObject Boddy = (JsonObject) parser.parse(Body);
+            JsonObject to = (JsonObject) Boddy.get("data");
+            Token = String.valueOf(to.get("token"));
+            return Token;
+        } catch (Exception e) {
+            GemTestReporter.addTestStep("Final token", "Some error occured while fetching token", STATUS.FAIL);
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public static String token2() {
+        try {
+            String Token;
+            String urlss = ProjectConfigData.getProperty("Login");
+            String payload = ProjectSampleJson.getSampleDataString("Login2_sampleJson");
             Request request = new Request();
             request.setURL(urlss);
             request.setMethod("Post");
@@ -563,7 +590,8 @@ public class utils {
         }
         return response;
     }
-    public static Response DownldAPII(String url,String method,Map<String, String> headers){
+
+    public static Response DownldAPII(String url, String method, Map<String, String> headers) {
         Response response = new Response();
         try {
             String urlss = ProjectConfigData.getProperty(url);
@@ -583,7 +611,8 @@ public class utils {
         }
         return response;
     }
-    public static Response ruleAPii(String url,String method,String step,Map<String, String> headers){
+
+    public static Response ruleAPii(String url, String method, String step, Map<String, String> headers) {
         Response response = new Response();
         try {
             String urlss = ProjectConfigData.getProperty(url);

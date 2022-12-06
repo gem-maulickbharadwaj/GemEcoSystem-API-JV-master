@@ -45,6 +45,17 @@ public class stepDefinitions {
         status = utils.HitAPIWithToken(url, method, "Token Authentication", headers2).getStatus();
     }
 
+    @Given("^Set user wrong token endpoint and method \"(.*)\" and \"(.*)\"$")
+    public void setNewwAss(String url,String method) throws Exception{
+        Map<String, String> headers2 = new HashMap<>();
+        String j = token2();
+        assert j != null;
+        String jnew = j.replaceAll("^\"|\"$", "");
+        headers2.put("Authorization", "Bearer " + jnew);
+        GemTestReporter.addTestStep("Bearer Token", "Bearer Token :" + jnew, STATUS.INFO);
+        status = utils.HitAPIWithToken(url, method, "", headers2).getStatus();
+    }
+
     @Given("^Sett token endpoint and method \"(.*)\" and \"(.*)\" and \"(.*)\" and \"(.*)\" and \"(.*)\" and \"(.*)\" and \"(.*)\" and \"(.*)\"$")
     public void hitApiToken(String url, String url1, String url2, String url3, String method, String method1, String SampleName, String SampleName2) throws Exception {
         utils.TextUpload(url1, "Hello World", ProjectConfigData.getProperty("username"), utils.Gettoken2());
@@ -499,6 +510,21 @@ public class stepDefinitions {
             headers.put("Authorization", "Bearer " + jnew);
             GemTestReporter.addTestStep("Bearer Token", "Bearer Token: " + jnew, STATUS.INFO);
             status = utils.HitAPIPostToken(url, method, "Token Authentication", headers, SampleName).getStatus();
+        } catch (Exception e) {
+            GemTestReporter.addTestStep("Request Verification", "Request not executed", STATUS.FAIL);
+        }
+    }
+
+    @Given("^Set post user wrong token endpoint and method \"(.*)\" and \"(.*)\" and \"(.*)\"$")
+    public void postMmm(String url, String method, String SampleName) throws Exception {
+        try {
+            Map<String, String> headers = new HashMap<>();
+            String j = token2();
+            assert j != null;
+            String jnew = j.replaceAll("^\"|\"$", "");
+            headers.put("Authorization", "Bearer " + jnew);
+            GemTestReporter.addTestStep("Bearer Token", "Bearer Token: " + jnew, STATUS.INFO);
+            status = utils.HitAPIPostToken(url, method, "", headers, SampleName).getStatus();
         } catch (Exception e) {
             GemTestReporter.addTestStep("Request Verification", "Request not executed", STATUS.FAIL);
         }

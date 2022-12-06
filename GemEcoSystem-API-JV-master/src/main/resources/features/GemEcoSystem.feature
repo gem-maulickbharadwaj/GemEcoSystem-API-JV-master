@@ -63,12 +63,12 @@ Feature: GemEcoSystem-APIs-JV
       | endpoint | Method | Expected_status | SampleName       |
       | Login    | Post   | 200             | Login_sampleJson |
 
-  Scenario Outline: Login User with wrong credentials
-    Given Set credentials endpoint and method and SampleName "<endpoint>" and "<Method>" and "<SampleName>"
-    Then Verify Status code <Expected_status>
-    Examples:
-      | endpoint | Method | Expected_status | SampleName        |
-      | Login    | Post   | 400             | Login2_sampleJson |
+#  Scenario Outline: Login User with wrong credentials
+#    Given Set credentials endpoint and method and SampleName "<endpoint>" and "<Method>" and "<SampleName>"
+#    Then Verify Status code <Expected_status>
+#    Examples:
+#      | endpoint | Method | Expected_status | SampleName   |
+#      | Login    | Post   | 400             | loginInvalid |
 
   Scenario Outline: Login User with Empty Fields
     Given Set credentials endpoint and method and SampleName "<endpoint>" and "<Method>" and "<SampleName>"
@@ -497,7 +497,7 @@ Feature: GemEcoSystem-APIs-JV
     Given Post Suite-API endpoint and method and SampleName and step "<endpoint>" and "<endpoint1>" and "<endpoint2>" and "<Method>" and "<SampleName>" and "<SampleName1>" and "<stepName>"
     Then Verify Status code <Expected_status>
     Examples:
-      | endpoint     | endpoint1   | endpoint2       | Method | Expected_status | SampleName              | SampleName1                | stepName                           |
+      | endpoint      | endpoint1   | endpoint2       | Method | Expected_status | SampleName              | SampleName1                | stepName                             |
       | folderAccess1 | fileUpload3 | permanentDelete | Post   | 200             | folderAccess_sampleJson | permanentDelete_sampleJson | Test to remove folder access to user |
 
   Scenario Outline:Remove access of the folder from the users when type provided is incorrect
@@ -894,6 +894,140 @@ Feature: GemEcoSystem-APIs-JV
     Examples:
       | endpoint | Method | Expected_status |
       | pointApi | get    | 403             |
+
+  Scenario Outline: API to get the List of Suites in the Application
+    Given Set token endpoint and method "<endpoint>" and "<Method>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status |
+      | suiteApi | get    | 200             |
+
+  Scenario Outline: If the User does not have access to any projects (suiteApi)
+    Given Set user wrong token endpoint and method "<endpoint>" and "<Method>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status |
+      | suiteApi | get    | 400             |
+
+  Scenario Outline: If Page No is invalid
+    Given Setttz token endpoint and method "<endpoint>" and "<Method>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint  | Method | Expected_status |
+      | suiteApi3 | get    | 400             |
+
+  Scenario Outline: API to get the List of Suites in the Application when wrong authentication passed
+    Given Set Wrong token endpoint and method "<endpoint>" and "<Method>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status |
+      | suiteApi | get    | 403             |
+
+  Scenario Outline: API to get the List of Suites in the Application when header is not given
+    Given Set Empty token endpoint and method "<endpoint>" and "<Method>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status |
+      | suiteApi | get    | 403             |
+
+  Scenario Outline: API to Create the Suite in the Application
+    Given Set post token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status | SampleName |
+      | suiteApi | post   | 201             | suiteApi   |
+
+  Scenario Outline: When the user does not have write access to the project
+    Given Set post user wrong token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status | SampleName |
+      | suiteApi | post   | 400             | suiteApi   |
+
+  Scenario Outline: Report Name Already Exists in the same project with same report name
+    Given Sett posttt token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status | SampleName |
+      | suiteApi | post   | 409             | suiteApi2  |
+
+  Scenario Outline: API to get the List of Tests in the Application
+    Given Set token endpoint and method "<endpoint>" and "<Method>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status |
+      | testApi  | get    | 200             |
+
+  Scenario Outline: If Test Case Details are not found
+    Given Setttz token endpoint and method "<endpoint>" and "<Method>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status |
+      | testApi2 | get    | 400             |
+
+  Scenario Outline: If the User does not have access to any projects (testApi)
+    Given Set user wrong token endpoint and method "<endpoint>" and "<Method>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status |
+      | testApi  | get    | 400             |
+
+  Scenario Outline: If Suite Details are not found (testApi)
+    Given Set user wrong token endpoint and method "<endpoint>" and "<Method>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status |
+      | testApi3 | get    | 400             |
+
+  Scenario Outline: If Page No is invalid (testApi)
+    Given Set user wrong token endpoint and method "<endpoint>" and "<Method>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status |
+      | testApi4 | get    | 400             |
+
+  Scenario Outline: API to Create the Test case in the Application
+    Given Set post token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status | SampleName |
+      | testApi  | post   | 201             | testApi    |
+
+  Scenario Outline: When the user does not have write access to the project (testApi)
+    Given Set post user wrong token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status | SampleName |
+      | testApi  | post   | 400             | testApi    |
+
+  Scenario Outline: Report Name Already Exists in the same project with same report name (testApi)
+    Given Sett posttt token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status | SampleName |
+      | testApi  | post   | 400             | testApi2   |
+
+  Scenario Outline: Suite details are not found (testApi)
+    Given Sett posttt token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status | SampleName |
+      | testApi  | post   | 400             | testApi3   |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #
 #
 #

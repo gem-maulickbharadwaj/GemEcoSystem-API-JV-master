@@ -82,6 +82,13 @@
     "postRuleApi": "https://apis-beta.gemecosystem.com/rule?pageNo=01&sort=1&sortedColumn=status",
     "lastFiveApi": "https://apis-beta.gemecosystem.com/suiteexe/lastFive?s_run_id=TEST-PROJECT_beta_f62d963d-53a2-47db-8dd7-c2388358c5d8",
     "lastFiveApi1": "https://apis-beta.gemecosystem.com/suiteexe/lastFive?s_run_id=569acb-05dd-4a0e-97e1-d051ae605112",
-    "pointApi": "https://apis-beta.gemecosystem.com/enter-point"
+    "pointApi": "https://apis-beta.gemecosystem.com/enter-point",
+    "suiteApi": "https://apis-beta.gemecosystem.com/suite",
+    "suiteApi2": "https://apis-beta.gemecosystem.com/suite?s_id=999",
+    "suiteApi3": "https://apis-beta.gemecosystem.com/suite?pageNo=-1",
+    "testApi": "https://apis-beta.gemecosystem.com/test",
+    "testApi2": "https://apis-beta.gemecosystem.com/test?tc_id=-1",
+    "testApi3": "https://apis-beta.gemecosystem.com/test?tc_id=71",
+    "testApi4": "https://apis-beta.gemecosystem.com/test?pageNo=-1"
   }
 }
