@@ -1,5 +1,5 @@
 Feature: GemEcoSystem-APIs-JV
-#
+##
   Scenario Outline: Sample-Test
     Given Set endpoint and method "<endpoint>" and "<Method>"
     Then Verify Status code <Expected_status>
@@ -63,12 +63,12 @@ Feature: GemEcoSystem-APIs-JV
       | endpoint | Method | Expected_status | SampleName       |
       | Login    | Post   | 200             | Login_sampleJson |
 
-#  Scenario Outline: Login User with wrong credentials
-#    Given Set credentials endpoint and method and SampleName "<endpoint>" and "<Method>" and "<SampleName>"
-#    Then Verify Status code <Expected_status>
-#    Examples:
-#      | endpoint | Method | Expected_status | SampleName   |
-#      | Login    | Post   | 400             | loginInvalid |
+  Scenario Outline: Login User with wrong credentials
+    Given Set credentials endpoint and method and SampleName "<endpoint>" and "<Method>" and "<SampleName>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status | SampleName          |
+      | Login    | Post   | 400             | loginInvalid_sample |
 
   Scenario Outline: Login User with Empty Fields
     Given Set credentials endpoint and method and SampleName "<endpoint>" and "<Method>" and "<SampleName>"
@@ -894,7 +894,7 @@ Feature: GemEcoSystem-APIs-JV
     Examples:
       | endpoint | Method | Expected_status |
       | pointApi | get    | 403             |
-
+#
   Scenario Outline: API to get the List of Suites in the Application
     Given Set token endpoint and method "<endpoint>" and "<Method>"
     Then Verify Status code <Expected_status>
@@ -950,6 +950,41 @@ Feature: GemEcoSystem-APIs-JV
     Examples:
       | endpoint | Method | Expected_status | SampleName |
       | suiteApi | post   | 409             | suiteApi2  |
+
+  Scenario Outline: API to update the Suite in the Application (suiteApi)
+    Given Set post token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status | SampleName |
+      | suiteApi | put    | 201             | suiteApi3  |
+
+  Scenario Outline: When the user does not have write access to the project put case (suiteApi)
+    Given Set post user wrong token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status | SampleName |
+      | suiteApi | put    | 400             | suiteApi3  |
+
+  Scenario Outline: Report Name Already Exists in the same project with same report name (suiteApi)
+    Given Sett posttt token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status | SampleName |
+      | suiteApi | put    | 409             | suiteApi4  |
+
+  Scenario Outline: s_id is not present in request (suiteApi)
+    Given Sett posttt token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status | SampleName |
+      | suiteApi | put    | 400             | suiteApi5  |
+
+  Scenario Outline: s_id is not present in request (suiteApi)
+    Given Sett posttt token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status | SampleName |
+      | suiteApi | put    | 400             | suiteApi5  |
 
   Scenario Outline: API to get the List of Tests in the Application
     Given Set token endpoint and method "<endpoint>" and "<Method>"
@@ -1013,6 +1048,41 @@ Feature: GemEcoSystem-APIs-JV
     Examples:
       | endpoint | Method | Expected_status | SampleName |
       | testApi  | post   | 400             | testApi3   |
+
+  Scenario Outline: API to update the Test Case in the Application (testApi)
+    Given Set post token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status | SampleName |
+      | testApi  | put    | 201             | testApi4   |
+
+  Scenario Outline: When the user does not have write access to the project put case (testApi)
+    Given Set post user wrong token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status | SampleName |
+      | testApi  | put    | 400             | testApi4   |
+
+  Scenario Outline: Test Case Name Already Exists in the same project with same report name
+    Given Sett posttt token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status | SampleName |
+      | testApi  | put    | 400             | testApi5   |
+
+  Scenario Outline: Suite details are not found putcase (testApi)
+    Given Sett posttt token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status | SampleName |
+      | testApi  | put    | 400             | testApi6   |
+
+  Scenario Outline: Test Case details are not found (testApi)
+    Given Sett posttt token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
+    Then Verify Status code <Expected_status>
+    Examples:
+      | endpoint | Method | Expected_status | SampleName |
+      | testApi  | put    | 400             | testApi7   |
 
 
 
