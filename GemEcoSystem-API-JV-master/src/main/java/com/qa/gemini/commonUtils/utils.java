@@ -5,6 +5,7 @@ import com.gemini.generic.reporting.GemTestReporter;
 import com.gemini.generic.reporting.STATUS;
 import com.gemini.generic.utils.GemJarGlobalVar;
 import com.gemini.generic.utils.ProjectConfigData;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import io.restassured.RestAssured;
@@ -106,6 +107,86 @@ public class utils {
                 String payloads = ProjectSampleJson.getSampleDataString(sampleName);
                 JsonParser parser = new JsonParser();
                 JsonObject pay = (JsonObject) parser.parse(payloads);
+                String payload = String.valueOf(ApiHealthCheckUtils.result(pay));
+                request.setRequestPayload(payload);
+                GemTestReporter.addTestStep("Payload ", String.valueOf(payload), STATUS.INFO);
+            }
+            response = ApiInvocation.handleRequest(request);
+            GemTestReporter.addTestStep(method.toUpperCase() + " Request Verification ", method.toUpperCase() + " Request Executed Successfully", STATUS.PASS);
+            if (step.isEmpty()) {
+                GemTestReporter.addTestStep("Message", response.getErrorMessage(), STATUS.INFO);
+            }
+            GemTestReporter.addTestStep("Response Message", response.getResponseMessage(), STATUS.INFO);
+            if ((response.getResponseBody()) != null) {
+                GemTestReporter.addTestStep("Response Body", response.getResponseBody(), STATUS.INFO);
+            } else {
+                GemTestReporter.addTestStep("Response Body", "No-Response", STATUS.INFO);
+            }
+        } catch (Exception e) {
+            GemTestReporter.addTestStep(method.toUpperCase() + " Request Verification ", method.toUpperCase() + " Request Did not Executed Successfully", STATUS.FAIL);
+            GemTestReporter.addTestStep("Response Message", response.getResponseMessage(), STATUS.INFO);
+        }
+        return response;
+    }
+
+    public static Response HitApiArrayUserr(String UrlNameFromConfig, String method, String step, Map<String, String> headers, String sampleName) throws Exception {
+        Response response = new Response();
+        try {
+            Request request = new Request();
+            String url = ProjectConfigData.getProperty(UrlNameFromConfig);
+            GemTestReporter.addTestStep("Url for " + method.toUpperCase() + " Request", url, STATUS.INFO);
+            request.setURL(url);
+            request.setMethod(method);
+            if (!headers.isEmpty()) {
+                request.setHeaderMap(headers);
+            }
+            if (!step.isEmpty()) {
+                request.setStep(step);
+            }
+            if (!sampleName.equals("")) {
+                String payloads = ProjectSampleJson.getSampleDataString(sampleName);
+                JsonParser parser = new JsonParser();
+                JsonArray pay = (JsonArray) parser.parse(payloads);
+                String payload = String.valueOf(ApiHealthCheckUtils.result(pay));
+                request.setRequestPayload(payload);
+                GemTestReporter.addTestStep("Payload ", String.valueOf(payload), STATUS.INFO);
+            }
+            response = ApiInvocation.handleRequest(request);
+            GemTestReporter.addTestStep(method.toUpperCase() + " Request Verification ", method.toUpperCase() + " Request Executed Successfully", STATUS.PASS);
+            if (step.isEmpty()) {
+                GemTestReporter.addTestStep("Message", response.getErrorMessage(), STATUS.INFO);
+            }
+            GemTestReporter.addTestStep("Response Message", response.getResponseMessage(), STATUS.INFO);
+            if ((response.getResponseBody()) != null) {
+                GemTestReporter.addTestStep("Response Body", response.getResponseBody(), STATUS.INFO);
+            } else {
+                GemTestReporter.addTestStep("Response Body", "No-Response", STATUS.INFO);
+            }
+        } catch (Exception e) {
+            GemTestReporter.addTestStep(method.toUpperCase() + " Request Verification ", method.toUpperCase() + " Request Did not Executed Successfully", STATUS.FAIL);
+            GemTestReporter.addTestStep("Response Message", response.getResponseMessage(), STATUS.INFO);
+        }
+        return response;
+    }
+
+    public static Response hitApiWithArray(String UrlNameFromConfig, String method, String step, Map<String, String> headers, String sampleName) throws Exception {
+        Response response = new Response();
+        try {
+            Request request = new Request();
+            String url = ProjectConfigData.getProperty(UrlNameFromConfig);
+            GemTestReporter.addTestStep("Url for " + method.toUpperCase() + " Request", url, STATUS.INFO);
+            request.setURL(url);
+            request.setMethod(method);
+            if (!headers.isEmpty()) {
+                request.setHeaderMap(headers);
+            }
+            if (!step.isEmpty()) {
+                request.setStep(step);
+            }
+            if (!sampleName.equals("")) {
+                String payloads = ProjectSampleJson.getSampleDataString(sampleName);
+                JsonParser parser = new JsonParser();
+                JsonArray pay = (JsonArray) parser.parse(payloads);
                 String payload = String.valueOf(ApiHealthCheckUtils.result(pay));
                 request.setRequestPayload(payload);
                 GemTestReporter.addTestStep("Payload ", String.valueOf(payload), STATUS.INFO);

@@ -77,7 +77,7 @@
     "getModuleApi": "https://apis-beta.gemecosystem.com/module?modules=auto123",
     "fileUplo": "https://apis-beta.gemecosystem.com/v1/upload/data?tag=PUBLIC&folder=x/y&file=smaple.txt",
     "gettingIds": "https://apis-beta.gemecosystem.com/v1/file/recyclebin?pageNo=1",
-    "getRuleApis": "https://apis-beta.gemecosystem.com/rule/action?s_run_id=TEST-PROJECT_beta_f62d963d-53a2-47db-8dd7-c2388358c5d8",
+    "getRuleApis": "https://apis-beta.gemecosystem.com/rule/action?s_run_id=GEMECO-API-PY_Beta_2963d0bc-5dde-4f80-b976-f5ee3cf7bea1",
     "getRuleApis11": "https://apis-beta.gemecosystem.com/rule/action?s_run_id=pwn",
     "postRuleApi": "https://apis-beta.gemecosystem.com/rule?pageNo=01&sort=1&sortedColumn=status",
     "lastFiveApi": "https://apis-beta.gemecosystem.com/suiteexe/lastFive?s_run_id=TEST-PROJECT_beta_f62d963d-53a2-47db-8dd7-c2388358c5d8",

@@ -34,8 +34,9 @@ public class stepDefinitions {
     public void check_status_code(int Expected) {
         utils.VerifyStatusCode(Expected, status);
     }
+
     @Given("^Set token endpoint and method \"(.*)\" and \"(.*)\"$")
-    public void setNewwAs(String url,String method) throws Exception{
+    public void setNewwAs(String url, String method) throws Exception {
         Map<String, String> headers2 = new HashMap<>();
         String j = token();
         assert j != null;
@@ -46,7 +47,7 @@ public class stepDefinitions {
     }
 
     @Given("^Set user wrong token endpoint and method \"(.*)\" and \"(.*)\"$")
-    public void setNewwAss(String url,String method) throws Exception{
+    public void setNewwAss(String url, String method) throws Exception {
         Map<String, String> headers2 = new HashMap<>();
         String j = token2();
         assert j != null;
@@ -409,7 +410,7 @@ public class stepDefinitions {
             headers.put("Authorization", "Bearer " + jnew);
             GemTestReporter.addTestStep("Bearer Token", "Bearer Token: " + jnew, STATUS.INFO);
             Map<String, String> parameters = new HashMap<>();
-            parameters.put("id","gem-np:MAULICK:Access_sampleJson.json");
+            parameters.put("id", "gem-np:MAULICK:Access_sampleJson.json");
             RestAssured.baseURI = ProjectConfigData.getProperty(url);
             GemTestReporter.addTestStep("Request URL", ProjectConfigData.getProperty(url), STATUS.INFO);
             //  status = RestAssured.given().params(parameters).headers(headers).when().get().getStatusCode();
@@ -433,7 +434,7 @@ public class stepDefinitions {
             headers.put("Authorization", "Bearer " + "");
             GemTestReporter.addTestStep("Bearer Token", "Bearer Token: " + null, STATUS.INFO);
             Map<String, String> parameters = new HashMap<>();
-            parameters.put("id","gem-np:MAULICK:Access_sampleJson.json");
+            parameters.put("id", "gem-np:MAULICK:Access_sampleJson.json");
             RestAssured.baseURI = ProjectConfigData.getProperty(url);
             GemTestReporter.addTestStep("Request URL", ProjectConfigData.getProperty(url), STATUS.INFO);
             status = RestAssured.given().params(parameters).when().get().statusCode();
@@ -454,15 +455,15 @@ public class stepDefinitions {
             headers.put("Authorization", "Bearer " + jnew);
             GemTestReporter.addTestStep("Bearer Token", "Bearer Token: " + jnew, STATUS.INFO);
             Map<String, String> parameters = new HashMap<>();
-            parameters.put("id","gem-np:MAULICK:Access_sampleJson.json");
+            parameters.put("id", "gem-np:MAULICK:Access_sampleJson.json");
             RestAssured.baseURI = ProjectConfigData.getProperty(url);
             GemTestReporter.addTestStep("Request URL", ProjectConfigData.getProperty(url), STATUS.INFO);
-            Response R=RestAssured.given().params(parameters).headers(headers).when().get();
-            status=R.getStatusCode();
-            if(status==200) {
+            Response R = RestAssured.given().params(parameters).headers(headers).when().get();
+            status = R.getStatusCode();
+            if (status == 200) {
                 //GemTestReporter.addTestStep("Response message",R.getStatusLine().toUpperCase(),STATUS.INFO);
                 GemTestReporter.addTestStep("Request Verification", "Request executed successfully", STATUS.PASS);
-            }else{
+            } else {
                 GemTestReporter.addTestStep("Request Verification", "Request executed unsuccessfully", STATUS.FAIL);
             }
             utils.Access(url2, method1, SampleName, headers, "");
@@ -488,7 +489,7 @@ public class stepDefinitions {
             headers2.put("Authorization", "Bearer " + jnew);
             GemTestReporter.addTestStep("Bearer Token", "Bearer Token: " + jnew, STATUS.INFO);
             Map<String, String> parameters = new HashMap<>();
-            parameters.put("id","gem-np:MAULICK:Access_sampleJson.json");
+            parameters.put("id", "gem-np:MAULICK:Access_sampleJson.json");
             RestAssured.baseURI = ProjectConfigData.getProperty(url);
             GemTestReporter.addTestStep("Request URL", ProjectConfigData.getProperty(url), STATUS.INFO);
             status = RestAssured.given().params(parameters).headers(headers2).when().get().statusCode();
@@ -515,6 +516,21 @@ public class stepDefinitions {
         }
     }
 
+    @Given("^Setttt post array token endpoint and method \"(.*)\" and \"(.*)\" and \"(.*)\"$")
+    public void array_jsonn(String url, String method, String SampleName) throws Exception {
+        try {
+            Map<String, String> headers = new HashMap<>();
+            String j = token();
+            assert j != null;
+            String jnew = j.replaceAll("^\"|\"$", "");
+            headers.put("Authorization", "Bearer " + jnew);
+            GemTestReporter.addTestStep("Bearer Token", "Bearer Token: " + jnew, STATUS.INFO);
+            status = utils.hitApiWithArray(url, method, "Token Authentication", headers, SampleName).getStatus();
+        } catch (Exception e) {
+            GemTestReporter.addTestStep("Request Verification", "Request not executed", STATUS.FAIL);
+        }
+    }
+
     @Given("^Set post user wrong token endpoint and method \"(.*)\" and \"(.*)\" and \"(.*)\"$")
     public void postMmm(String url, String method, String SampleName) throws Exception {
         try {
@@ -525,6 +541,21 @@ public class stepDefinitions {
             headers.put("Authorization", "Bearer " + jnew);
             GemTestReporter.addTestStep("Bearer Token", "Bearer Token: " + jnew, STATUS.INFO);
             status = utils.HitAPIPostToken(url, method, "", headers, SampleName).getStatus();
+        } catch (Exception e) {
+            GemTestReporter.addTestStep("Request Verification", "Request not executed", STATUS.FAIL);
+        }
+    }
+
+    @Given("^Set post array user wrong token endpoint and method \"(.*)\" and \"(.*)\" and \"(.*)\"$")
+    public void array_wrong_user(String url, String method, String SampleName) throws Exception {
+        try {
+            Map<String, String> headers = new HashMap<>();
+            String j = token2();
+            assert j != null;
+            String jnew = j.replaceAll("^\"|\"$", "");
+            headers.put("Authorization", "Bearer " + jnew);
+            GemTestReporter.addTestStep("Bearer Token", "Bearer Token: " + jnew, STATUS.INFO);
+            status = utils.HitApiArrayUserr(url, method, "", headers, SampleName).getStatus();
         } catch (Exception e) {
             GemTestReporter.addTestStep("Request Verification", "Request not executed", STATUS.FAIL);
         }

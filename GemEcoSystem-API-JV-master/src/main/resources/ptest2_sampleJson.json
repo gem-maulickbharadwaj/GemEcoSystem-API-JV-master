@@ -1,34 +1,35 @@
 {
-
   "tc_run_id": "dummyrtrtrt",
-
   "start_time": "#epoch#",
-
   "end_time": "#epoch#",
-
   "name": "sample_testcase2",
-
   "category": "sample",
-
   "status": "PASS",
-
   "user": "maulick_test",
-
   "machine": "csgeek",
-
   "result_file": null,
-
   "product_type": "PYGEM",
-
   "ignore": false,
-
   "miscData": [],
-
-  "steps":[{"title":"test","desc":"testdesc","status":"PASS"},{"title":"test1","desc":"testdesc1","status":"FAIL"},{"title":"test2","desc":"testdesc2","status":"EXE"}]
-
-
-
-
-
-
+  "steps": [
+    {
+      "title": "test",
+      "desc": "testdesc",
+      "status": "PASS"
+    },
+    {
+      "title": "test1",
+      "desc": "testdesc1",
+      "status": "FAIL"
+    },
+    {
+      "title": "test2",
+      "desc": "testdesc2",
+      "status": "EXE"
+    }
+  ],
+  "run_type": "ON DEMAND",
+  "run_mode": "Windows 10",
+  "invoke_user": "maulick",
+  "base_user": "maulick_b"
 }

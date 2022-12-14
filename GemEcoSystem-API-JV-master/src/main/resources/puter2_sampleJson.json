@@ -1,30 +1,36 @@
 {
-
   "tc_run_id": "dummy_test_ids",
-
-  "start_time": "#epoch#","end_time": "#epoch#",
-
-  "name": "sample_testcase2","category": "sample",
-
+  "start_time": "#epoch#",
+  "end_time": "#epoch#",
+  "name": "sample_testcase2",
+  "category": "sample",
   "log_file": null,
-
   "status": "FAIL",
-
   "user": "maulick_test",
-
   "machine": "rere",
-
   "result_file": null,
-
   "product_type": "PYGEM",
-
   "ignore": false,
-
   "miscData": [],
-
-  "steps":[{"title":"test","desc":"testdesc","status":"PASS"},{"title":"test1","desc":"testdesc1","status":"FAIL"},{"title":"test2","desc":"testdesc2","status":"EXE"}]
-
-
-
-
+  "steps": [
+    {
+      "title": "test",
+      "desc": "testdesc",
+      "status": "PASS"
+    },
+    {
+      "title": "test1",
+      "desc": "testdesc1",
+      "status": "FAIL"
+    },
+    {
+      "title": "test2",
+      "desc": "testdesc2",
+      "status": "EXE"
+    }
+  ],
+  "run_type": "ON DEMAND",
+  "run_mode": "Windows 10",
+  "invoke_user": "maulick",
+  "base_user": "maulick_b"
 }

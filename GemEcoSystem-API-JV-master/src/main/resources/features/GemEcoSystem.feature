@@ -141,7 +141,7 @@ Feature: GemEcoSystem-APIs-JV
       | pospo    | Post   | 400             | psuite2_sampleJson |
 
 
-  Scenario Outline: Update the suite using Put API
+  Scenario Outline: Update the suite using Put API (suitexe case)
     Given Update Suite using endpoint and method and SampleName "<endpoint>" and "<Method>" and "<SampleName>"
     Then Verify Status code <Expected_status>
     Examples:
@@ -211,7 +211,7 @@ Feature: GemEcoSystem-APIs-JV
       | endpoint | Method | Expected_status | SampleName        |
       | pospos   | post   | 400             | ptest3_sampleJson |
 
-  Scenario Outline: Update the suite using Put API
+  Scenario Outline: Update the suite using Put API (testcase case)
     Given Update Suite type2 using endpoint and method and SampleName "<endpoint>" and "<Method>" and "<SampleName>"
     Then Verify Status code <Expected_status>
     Examples:
@@ -1022,14 +1022,14 @@ Feature: GemEcoSystem-APIs-JV
       | testApi4 | get    | 400             |
 
   Scenario Outline: API to Create the Test case in the Application
-    Given Set post token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
+    Given Setttt post array token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
     Then Verify Status code <Expected_status>
     Examples:
       | endpoint | Method | Expected_status | SampleName |
       | testApi  | post   | 201             | testApi    |
 
   Scenario Outline: When the user does not have write access to the project (testApi)
-    Given Set post user wrong token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
+    Given Set post array user wrong token endpoint and method "<endpoint>" and "<Method>" and "<SampleName>"
     Then Verify Status code <Expected_status>
     Examples:
       | endpoint | Method | Expected_status | SampleName |
