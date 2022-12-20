@@ -51,8 +51,13 @@
     "Gettoken": "https://apis-beta.gemecosystem.com/bridge/token",
     "posttoken": "https://apis-beta.gemecosystem.com/bridge/token/change",
     "fileUpload1": "https://apis-beta.gemecosystem.com/v1/upload/file?tag=PUBLIC&folder=maulick",
+    "fileUploadWithSrun": "https://apis-beta.gemecosystem.com/v1/upload/file?tag=Protected&folder=maulick&s_run_id=GEMECO-API-PY_Beta_2963d0bc-5dde-4f80-b976-f5ee3cf7bea1",
+    "fileUploadWithSrun1": "https://apis-beta.gemecosystem.com/v1/upload/file?tag=private&folder=maulick&s_run_id=GEMECO-API-PY_Beta_2963d0bc-5dde-4f80-b976-f5ee3cf7bea1",
+    "fileUploadCheck": "https://apis-beta.gemecosystem.com/v1/download/file?id=gem-np:MAULICK:testing_code.txt",
     "fileUpload2": "https://apis-beta.gemecosystem.com/v1/upload/file?tag=maulick&folder=maulick",
     "fileUpload3": "https://apis-beta.gemecosystem.com/v1/upload/data?tag=PUBLIC&folder=maulick&file=Access_sampleJson.json",
+    "fileUpload3WithSrun": "https://apis-beta.gemecosystem.com/v1/upload/data?tag=protected&folder=maulick&file=Access_sampleJson.json&s_run_id=GEMECO-API-PY_Beta_2963d0bc-5dde-4f80-b976-f5ee3cf7bea1",
+    "fileUploadCheck2": "https://apis-beta.gemecosystem.com/v1/download/file?id=gem-np:MAULICK:demoo.txt",
     "downloadApi": "https://apis-beta.gemecosystem.com/v1/download/file?id=gem-np:maulick:cc.txt",
     "fileUpload4": "https://apis-beta.gemecosystem.com/v1/upload/data?tag=xyz&folder=maulick&file=smaple.txt",
     "fileUpload5": "https://apis-beta.gemecosystem.com/v1/upload/data?tag=PUBLIC&folder=x/y&file=smaple.txt",
@@ -89,6 +94,13 @@
     "testApi": "https://apis-beta.gemecosystem.com/test",
     "testApi2": "https://apis-beta.gemecosystem.com/test?tc_id=-1",
     "testApi3": "https://apis-beta.gemecosystem.com/test?tc_id=71",
-    "testApi4": "https://apis-beta.gemecosystem.com/test?pageNo=-1"
+    "testApi4": "https://apis-beta.gemecosystem.com/test?pageNo=-1",
+    "dashboardApi": "https://apis-beta.gemecosystem.com/v1/dashboard/count-suite",
+    "recentRunApi": "https://apis-beta.gemecosystem.com/v1/dashboard/recent-runs",
+    "runningRunApi": "https://apis-beta.gemecosystem.com/v1/dashboard/running-runs",
+    "culpritApi": "https://apis-beta.gemecosystem.com/v1/dashboard/culprits-analytics",
+    "suiteAnalytics": "https://apis-beta.gemecosystem.com/v1/dashboard/suite-analytics",
+    "runAnalytics": "https://apis-beta.gemecosystem.com/v1/dashboard/run-analytics",
+    "otpApi": "https://apis-beta.gemecosystem.com/otp"
   }
 }

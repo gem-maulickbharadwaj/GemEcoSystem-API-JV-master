@@ -546,6 +546,37 @@ public class stepDefinitions {
         }
     }
 
+    @Given("^Set posterr user wrong token endpoint and method \"(.*)\" and \"(.*)\"$")
+    public void url_has_chck(String url, String method) throws Exception {
+        try {
+            Map<String, String> headers = new HashMap<>();
+            String j = token2();
+            assert j != null;
+            String jnew = j.replaceAll("^\"|\"$", "");
+            headers.put("Authorization", "Bearer " + jnew);
+            GemTestReporter.addTestStep("Bearer Token", "Bearer Token: " + jnew, STATUS.INFO);
+            status = utils.HitAPIPostToken(url, method, "", headers, "").getStatus();
+        } catch (Exception e) {
+            GemTestReporter.addTestStep("Request Verification", "Request not executed", STATUS.FAIL);
+        }
+    }
+
+    @Given("^Set posterr userrss wrong token endpoint and method \"(.*)\" and \"(.*)\"$")
+    public void user_accs_chckk(String url, String method) throws Exception {
+        try {
+            Map<String, String> headers = new HashMap<>();
+            String j = token3();
+            System.out.println(j);
+            assert j != null;
+            String jnew = j.replaceAll("^\"|\"$", "");
+            headers.put("Authorization", "Bearer " + jnew);
+            GemTestReporter.addTestStep("Bearer Token", "Bearer Token: " + jnew, STATUS.INFO);
+            status = utils.HitAPIPostToken(url, method, "", headers, "").getStatus();
+        } catch (Exception e) {
+            GemTestReporter.addTestStep("Request Verification", "Request not executed", STATUS.FAIL);
+        }
+    }
+
     @Given("^Set post array user wrong token endpoint and method \"(.*)\" and \"(.*)\" and \"(.*)\"$")
     public void array_wrong_user(String url, String method, String SampleName) throws Exception {
         try {
