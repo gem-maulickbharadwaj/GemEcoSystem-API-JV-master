@@ -1,0 +1,174 @@
+2022-11-17 10:55:28 INFO  ApiInvocation:109 - URL Malformed
+2022-11-17 10:55:28 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-17 10:58:07 INFO  ApiInvocation:109 - URL Malformed
+2022-11-17 10:58:07 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-17 13:40:05 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-17 14:00:17 INFO  ApiInvocation:109 - URL Malformed
+2022-11-17 14:00:17 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-17 14:09:12 INFO  ApiInvocation:109 - URL Malformed
+2022-11-17 14:09:12 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-17 14:15:43 INFO  ApiInvocation:109 - URL Malformed
+2022-11-17 14:15:43 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-17 14:17:06 INFO  ApiInvocation:109 - URL Malformed
+2022-11-17 14:17:06 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-17 14:22:02 INFO  ApiInvocation:109 - URL Malformed
+2022-11-17 14:22:02 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-17 14:23:24 INFO  ApiInvocation:109 - URL Malformed
+2022-11-17 14:23:24 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-21 11:53:50 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-21 11:54:06 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-21 11:57:13 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-21 12:12:30 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-23 11:10:16 INFO  ApiInvocation:157 - I/O Exception Occured
+2022-11-23 11:10:16 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-23 11:10:37 INFO  ApiInvocation:157 - I/O Exception Occured
+2022-11-23 11:10:37 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-23 11:10:58 INFO  ApiInvocation:157 - I/O Exception Occured
+2022-11-23 11:10:58 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-23 11:40:33 INFO  ApiInvocation:109 - URL Malformed
+2022-11-23 11:40:33 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-23 11:40:33 INFO  ApiInvocation:109 - URL Malformed
+2022-11-23 11:40:33 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-23 11:40:39 INFO  ApiInvocation:109 - URL Malformed
+2022-11-23 11:40:39 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-23 11:40:43 INFO  ApiInvocation:109 - URL Malformed
+2022-11-23 11:40:43 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-23 11:40:43 INFO  ApiInvocation:109 - URL Malformed
+2022-11-23 11:40:43 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-23 11:40:44 INFO  ApiInvocation:109 - URL Malformed
+2022-11-23 11:40:44 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-23 11:40:51 INFO  ApiInvocation:109 - URL Malformed
+2022-11-23 11:40:51 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-23 11:40:56 INFO  ApiInvocation:109 - URL Malformed
+2022-11-23 11:40:56 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-23 11:40:58 INFO  ApiInvocation:109 - URL Malformed
+2022-11-23 11:40:58 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-23 11:40:59 INFO  ApiInvocation:109 - URL Malformed
+2022-11-23 11:40:59 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-23 11:41:01 INFO  ApiInvocation:109 - URL Malformed
+2022-11-23 11:41:01 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-23 11:42:26 INFO  ApiInvocation:109 - URL Malformed
+2022-11-23 11:42:26 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-24 17:11:35 INFO  ApiInvocation:109 - URL Malformed
+2022-11-24 17:11:35 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-24 17:29:23 INFO  ApiInvocation:109 - URL Malformed
+2022-11-24 17:29:23 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-24 17:29:23 INFO  ApiInvocation:109 - URL Malformed
+2022-11-24 17:29:23 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-24 17:29:24 INFO  ApiInvocation:109 - URL Malformed
+2022-11-24 17:29:24 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-24 17:29:25 INFO  ApiInvocation:109 - URL Malformed
+2022-11-24 17:29:25 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-24 17:29:25 INFO  ApiInvocation:109 - URL Malformed
+2022-11-24 17:29:25 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-24 17:29:27 INFO  ApiInvocation:109 - URL Malformed
+2022-11-24 17:29:27 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-24 17:29:28 INFO  ApiInvocation:109 - URL Malformed
+2022-11-24 17:29:28 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-24 17:29:29 INFO  ApiInvocation:109 - URL Malformed
+2022-11-24 17:29:29 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-24 17:29:30 INFO  ApiInvocation:109 - URL Malformed
+2022-11-24 17:29:30 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-24 17:29:31 INFO  ApiInvocation:109 - URL Malformed
+2022-11-24 17:29:31 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-24 17:29:32 INFO  ApiInvocation:109 - URL Malformed
+2022-11-24 17:29:32 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-24 17:29:33 INFO  ApiInvocation:109 - URL Malformed
+2022-11-24 17:29:33 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-24 17:29:34 INFO  ApiInvocation:109 - URL Malformed
+2022-11-24 17:29:34 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-24 17:41:40 INFO  ApiInvocation:109 - URL Malformed
+2022-11-24 17:41:40 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-24 20:07:06 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-24 20:07:07 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-24 20:07:10 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-24 20:18:54 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-24 20:18:55 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-24 20:18:57 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-24 21:50:30 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-24 21:50:30 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-24 21:50:32 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-24 22:08:33 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-24 22:08:34 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-24 22:08:36 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-24 22:10:50 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-24 22:10:51 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-24 22:10:53 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-24 22:32:20 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-24 22:32:22 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-24 22:32:24 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 13:55:00 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-25 13:58:41 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-25 14:58:16 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-25 15:13:14 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-25 17:35:08 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 17:35:10 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 17:35:11 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 17:36:32 INFO  ApiInvocation:157 - I/O Exception Occured
+2022-11-25 17:36:32 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-25 17:46:10 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 17:46:11 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 17:46:13 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 17:48:29 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 17:48:30 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 17:48:32 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 17:59:21 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 17:59:23 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 17:59:25 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 18:07:28 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 18:07:29 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 18:07:31 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 18:14:45 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 18:14:46 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 18:14:48 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 18:43:08 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 18:43:09 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-25 18:43:10 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-28 13:31:08 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-28 13:31:08 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-28 13:31:10 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-28 14:42:45 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-28 14:42:46 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-28 14:42:48 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-28 14:45:45 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-28 14:45:46 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-28 14:45:48 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-28 14:47:57 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-28 14:47:58 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-28 14:47:59 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-28 14:48:00 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-28 14:48:01 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-28 14:48:01 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-28 14:48:03 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-28 14:48:05 INFO  ApiInvocation:186 -  Exception Occured while posting FeatureRequest
+2022-11-28 14:54:31 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-28 14:54:32 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-28 14:54:34 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-29 15:50:09 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-29 15:50:10 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-29 15:50:12 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-29 17:54:49 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-29 17:54:51 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-29 18:01:57 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-29 18:01:59 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-29 20:05:48 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-29 20:05:50 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-29 20:06:23 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-29 20:13:29 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-29 20:13:30 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-29 20:13:32 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-29 20:22:19 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-29 20:22:20 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-11-29 20:22:23 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-12-01 10:36:25 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-12-01 10:36:26 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-12-01 10:36:28 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-12-01 14:03:57 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-12-01 14:03:58 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-12-01 14:03:59 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-12-01 16:47:43 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-12-01 16:47:44 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-12-01 16:47:47 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-12-01 17:23:14 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-12-01 17:23:15 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream
+2022-12-01 17:23:16 INFO  CommonUtils:41 - Exception Occured while Writing Data to Stream

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GemEcoSystem-API-JV-master/GemEcoSystem-API-JV.iml" filepath="$PROJECT_DIR$/GemEcoSystem-API-JV-master/GemEcoSystem-API-JV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/GemEcoSystem-API-JV-master.iml" filepath="$PROJECT_DIR$/.idea/GemEcoSystem-API-JV-master.iml" />
+    </modules>
+  </component>
+</project>
